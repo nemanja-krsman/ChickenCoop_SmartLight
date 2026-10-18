@@ -58,12 +58,12 @@ The DS1307 RTC maintains the system time independently of the ESP32's reset stat
 
 The dimmer circuit provides independent brightness control for two AC lighting loads.
 
-**Triac triggering and optoisolation:**Each channel uses a MOC3021-series optotriac driver and a BTA16-600B power triac. The optotriac driver provides an isolation barrier between the low-voltage control circuitry and the mains-side triac control circuit.
+- **Triac triggering and optoisolation:** Each channel uses a MOC3021-series optotriac driver and a BTA16-600B power triac. The optotriac driver provides an isolation barrier between the low-voltage control circuitry and the mains-side triac control circuit.
 
-**Phase-angle control:** After detecting an AC zero crossing, the ESP32 waits for a calculated delay before generating a triac firing pulse. Adjusting this delay changes the portion of each AC half-cycle delivered to the load, allowing the controller to regulate brightness.
+- **Phase-angle control:** After detecting an AC zero crossing, the ESP32 waits for a calculated delay before generating a triac firing pulse. Adjusting this delay changes the portion of each AC half-cycle delivered to the load, allowing the controller to regulate brightness.
 
 
-**Transient suppression:** An RC snubber network, consisting of the corresponding resistor and capacitor across each triac, helps limit voltage transients and unwanted rapid voltage changes. Its component values and suitability depend on the load and must be validated for the intended application.
+- **Transient suppression:** An RC snubber network, consisting of the corresponding resistor and capacitor across each triac, helps limit voltage transients and unwanted rapid voltage changes. Its component values and suitability depend on the load and must be validated for the intended application.
 
 ## 💻 Firmware Overview & Configuration
 
