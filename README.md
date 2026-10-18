@@ -72,19 +72,24 @@ The project supports both Bluetooth Classic and Bluetooth Low Energy (BLE) for i
 
 This flexibility allows you to use either a smartphone application or a standard serial terminal emulator over Bluetooth to configure the system.
 
-**Setting Current Time**
+🕒**Setting Current Time**
 
 To update the internal Real-Time Clock (RTC), send the time in a strict 4-digit format (hhmm):
 
-Command Example: 1400
+Command Example: **1400**
 
 Description: Sets the current time to 14:00.
 
 **Configuring Lighting Schedules (L1 / L2)**
 
-To program the schedule and transition durations for a specific lamp, use the following structured command format: 
 
-**L120:45;5;21:30;10**
+
+💡 **Setting the schedule and transition durations for a specific lamp**
+
+Command Syntax Rule:
+[Lamp][On-Time] ; [Sunrise-Duration] ; [Off-Time] ; [Sunset-Duration]
+
+Command Example: **L120:45;5;21:30;10**
 
 Parameter Breakdown:
 
@@ -98,5 +103,31 @@ Parameter Breakdown:
 
 - 10 — Sunset Duration (minutes): The bulb gradually dims down over a 10-minute period, turning completely off at 21:40.
 
-Command Syntax Rule:
-[Lamp][On-Time] ; [Sunrise-Duration] ; [Off-Time] ; [Sunset-Duration]
+
+🛠️ Installation & Prototyping
+
+To make this project accessible, you don't necessarily have to fabricate the custom PCB provided in this repository. You can easily build a working prototype using off-the-shelf development modules:
+
+- AC Dimmer Module: Off-the-shelf RobotDyn AC Light Dimmer Module (1-channel or 2-channel version).
+  <img width="548" height="733" alt="image" src="https://github.com/user-attachments/assets/6b103478-393c-45f2-a305-c7f1c044256b" />
+
+
+- RTC Module: Standard DS1307 I2C Real-Time Clock module with a backup battery.
+  <img width="563" height="263" alt="image" src="https://github.com/user-attachments/assets/aeb95772-337f-4ba3-8b10-b58593a15f86" />
+
+
+- Microcontroller: Standard ESP32 Development Board.
+
+
+📸 Prototype & Field Installation
+
+Below are photos from the prototype setup and the actual installation inside the chicken coop:
+
+**Figure 1:** Bench testing the ESP32 with the RTC and AC dimmer module.
+<img width="1000" height="740" alt="image" src="https://github.com/user-attachments/assets/c4eef0f8-6f38-423e-a624-009a0b80892f" />
+<img width="840" height="505" alt="image" src="https://github.com/user-attachments/assets/6836b739-108e-4efa-ba5e-d42502dab76b" />
+
+**Figure 2:** Final enclosure and wiring mounted inside the chicken coop.
+<img width="821" height="605" alt="image" src="https://github.com/user-attachments/assets/60cf1e94-c5a7-4317-8dd4-4caa77ea1aee" />
+<img width="913" height="684" alt="image" src="https://github.com/user-attachments/assets/79ec0c5f-ec79-4686-bc28-c5e958638bf0" />
+
