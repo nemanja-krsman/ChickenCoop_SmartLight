@@ -1,0 +1,6 @@
+Added Component: Designator=D1(DF-S_L8.4-W6.4-P5.10-LS10.4-TR)
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=N Pin=D1-2
+Added Pin To Net: NetName=NetD1_3 Pin=D1-3
+Added Pin To Net: NetName=P Pin=D1-4
+Added Member To Class: ClassName=CCSL_Schematic Member=Component D1 DF1504S-T

@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=DIMMER1 Pin=R7-1
+Added Pin To Net: NetName=DIMMER2 Pin=R7-1
