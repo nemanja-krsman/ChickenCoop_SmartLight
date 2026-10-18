@@ -1,6 +1,6 @@
-🐔 Smart Chicken Coop Lighting System
+🐔 **Smart Chicken Coop Lighting System**
 
-💡 Background & Motivation
+💡 **Background & Motivation**
 
 Like all living beings, chickens require a natural daily light cycle. They thrive with 8–10 hours of darkness combined with daylight hours for optimal health. While natural sunlight is ideal, managing this in a practical chicken coop requires a reliable, automated solution.
 
@@ -14,19 +14,19 @@ Cost Prohibitiveness: Smart lighting systems on the market are often too expensi
 
 This project introduces a cost-effective, standalone hardware solution built around an ESP32 microcontroller and a custom AC dimmer circuit designed specifically for two lighting bulbs.
 
-📐 System Architecture
+📐 **System Architecture**
 
 The top-level composition of the system is illustrated below:
 
 The system relies on three primary blocks:
 
-Real-Time Clock (RTC): Keeps track of accurate time independently.
+- Real-Time Clock (RTC): Keeps track of accurate time independently.
 
-ESP32 Microcontroller: The core brain managing timing logic, zero-cross synchronization, and PWM dimming output.
+- ESP32 Microcontroller: The core brain managing timing logic, zero-cross synchronization, and PWM dimming output.
 
-Dual AC Dimmer Circuit: Controls the sine wave intensity for two independent lighting channels (bulbs).
+- Dual AC Dimmer Circuit: Controls the sine wave intensity for two independent lighting channels (bulbs).
 
-🛠️ Hardware Schematic & Breakdown
+🛠️ **Hardware Schematic & Breakdown**
 
 1. Zero-Cross Detection CircuitTo cleanly control AC power without flickering or high-frequency noise, the system synchronizes with the AC mains frequency:
 
