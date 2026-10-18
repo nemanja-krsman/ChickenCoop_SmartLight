@@ -131,3 +131,10 @@ Below are photos from the prototype setup and the actual installation inside the
 <img width="821" height="605" alt="image" src="https://github.com/user-attachments/assets/60cf1e94-c5a7-4317-8dd4-4caa77ea1aee" />
 <img width="913" height="684" alt="image" src="https://github.com/user-attachments/assets/79ec0c5f-ec79-4686-bc28-c5e958638bf0" />
 
+⚠️ ****Safety Warning****
+
+This project involves hazardous mains voltage (230 V AC).
+
+Working with mains electricity can cause severe electric shock, serious injury, fire, or death if proper precautions are not taken.
+
+**Disclaimer:** This project is provided for educational and informational purposes only. The author assumes no responsibility for injury, property damage, or other losses resulting from the construction, modification, or use of this project. Anyone building or using this device is responsible for ensuring compliance with applicable electrical safety standards and regulations.
