@@ -18,23 +18,27 @@ This project introduces a cost-effective, standalone hardware solution built aro
 
 The top-level composition of the system is illustrated below:
 
-<img width="823" height="457" alt="image" src="https://github.com/user-attachments/assets/91a5c807-1a9e-418e-8f8f-fbb856c5ba50" />
+<img width="667" height="448" alt="image" src="https://github.com/user-attachments/assets/100bcef6-561d-4301-851b-0eca61856f04" />
+
 
 The system relies on three primary blocks:
 
 - Real-Time Clock (RTC): Keeps track of accurate time independently.
 - ESP32 Microcontroller: The core brain managing timing logic, zero-cross synchronization, and PWM dimming output.
+- ZeroCross circuit: Provides real-time synchronization pulses to the ESP32, indicating precisely when the AC input voltage crosses zero.
 - Dual AC Dimmer Circuit: Controls the sine wave intensity for two independent lighting channels (bulbs).
 
 🛠️ **Hardware Schematic & Breakdown**
 
-1. Zero-Cross Detection CircuitTo cleanly control AC power without flickering or high-frequency noise, the system synchronizes with the AC mains frequency:
+1. Zero-Cross Detection Circuit to cleanly control AC power without flickering or high-frequency noise, the system synchronizes with the AC mains frequency.
 
-Rectification: A DF1504S-T bridge rectifier converts the input 220V AC voltage into a DC reference path[cite: 2].
+<img width="1206" height="494" alt="image" src="https://github.com/user-attachments/assets/930e057e-5b9e-47b7-80ae-229bc3ae8983" />
 
-Optoisolation: The circuit uses two 120kΩ resistors in parallel to supply a small current that drives the internal LED of a 4N25 optocoupler[cite: 2].
+- Rectification: A DF1504S-T bridge rectifier converts the input 220V AC voltage into a DC voltage.
 
-Signal Generation: When the AC input voltage reaches zero, the optocoupler's LED and output transistor turn OFF, pulling the ZeroCross pin HIGH (3.3V) via a pull-up resistor. During active voltage phases, the transistor turns ON, pulling the ZeroCross pin to 0V[cite: 2]. This provides a precise hardware interrupt for the ESP32.
+- Optoisolation: The circuit uses two 120kΩ resistors in parallel to supply a small current that drives the internal LED of a 4N25 optocoupler.
+
+- Signal Generation: When the AC input voltage reaches zero, the optocoupler's LED and output transistor turn OFF, pulling the ZeroCross pin HIGH (3.3V) via a pull-up resistor. During active voltage phases, the transistor turns ON, pulling the ZeroCross pin to 0V. This provides a precise hardware interrupt for the ESP32.
 
 2. Real-Time Clock (RTC Block - DS1307)
    
