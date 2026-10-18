@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=DIMMER1 Pin=ESP32-6
-Removed Pin From Net: NetName=DIMMER2 Pin=ESP32-7
-Added Pin To Net: NetName=DIMMER2 Pin=ESP32-6
-Added Pin To Net: NetName=DIMMER1 Pin=ESP32-7

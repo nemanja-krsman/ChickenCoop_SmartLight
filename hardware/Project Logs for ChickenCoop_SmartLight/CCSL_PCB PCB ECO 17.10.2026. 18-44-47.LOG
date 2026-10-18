@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=5V Pin=Supply-1
-Removed Pin From Net: NetName=GND Pin=Supply-2
-Added Pin To Net: NetName=GND Pin=Supply-1
-Added Pin To Net: NetName=5V Pin=Supply-2
