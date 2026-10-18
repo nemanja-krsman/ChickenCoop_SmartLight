@@ -64,7 +64,7 @@ Dual Dimmer Circuit
 
 The firmware is designed to be lightweight, robust, and completely independent of external internet connections.
 
-📡 Connectivity Options
+📡 **Connectivity Options**
 
 The project supports both Bluetooth Classic and Bluetooth Low Energy (BLE) for initial setup and device configuration. You can easily select your preferred communication protocol using a simple #define directive in the code:
 
@@ -80,11 +80,7 @@ Command Example: **1400**
 
 Description: Sets the current time to 14:00.
 
-**Configuring Lighting Schedules (L1 / L2)**
-
-
-
-💡 **Setting the schedule and transition durations for a specific lamp**
+💡**Configuring Lighting Schedules (L1 / L2)**
 
 Command Syntax Rule:
 [Lamp][On-Time] ; [Sunrise-Duration] ; [Off-Time] ; [Sunset-Duration]
