@@ -1,6 +1,7 @@
 🐔 **Smart Chicken Coop Lighting System**
 
 💡 **Background & Motivation**
+
 Like all living beings, chickens require a natural daily light cycle. They thrive with 8–10 hours of darkness combined with daylight hours for optimal health. While natural sunlight is ideal, managing this in a practical chicken coop requires a reliable, automated solution.
 
 Sudden lighting transitions can cause severe stress to the flock, leading to reduced egg production and even cannibalism. To prevent this, a smooth soft-start and soft-dimming mechanism is essential.
@@ -14,6 +15,7 @@ Commercial solutions usually present two major roadblocks for small-scale produc
 This project introduces a cost-effective, standalone hardware solution built around an ESP32 microcontroller and a custom AC dimmer circuit designed specifically for two lighting bulbs.
 
 📐 **System Architecture**
+
 The top-level composition of the system is illustrated below:
 
 The system relies on three primary blocks:
@@ -23,6 +25,7 @@ The system relies on three primary blocks:
 - Dual AC Dimmer Circuit: Controls the sine wave intensity for two independent lighting channels (bulbs).
 
 🛠️ **Hardware Schematic & Breakdown**
+
 1. Zero-Cross Detection CircuitTo cleanly control AC power without flickering or high-frequency noise, the system synchronizes with the AC mains frequency:
 
 Rectification: A DF1504S-T bridge rectifier converts the input 220V AC voltage into a DC reference path[cite: 2].
@@ -32,11 +35,13 @@ Optoisolation: The circuit uses two 120kΩ resistors in parallel to supply a sma
 Signal Generation: When the AC input voltage reaches zero, the optocoupler's LED and output transistor turn OFF, pulling the ZeroCross pin HIGH (3.3V) via a pull-up resistor. During active voltage phases, the transistor turns ON, pulling the ZeroCross pin to 0V[cite: 2]. This provides a precise hardware interrupt for the ESP32.
 
 2. Real-Time Clock (RTC Block - DS1307)
+   
 Timekeeping & Backup: Utilizes a standard DS1307 I2C interface circuit equipped with a crystal oscillator and a backup battery (BT1) to prevent time loss during system reboots or power outages[cite: 2].
 
 Voltage Level Consideration: Since the ESP32 operates at 3.3V, the pull-up resistors (R9, R10) on the SDA/SCL lines are tied to 3.3V. However, note that the DS1307 supply voltage (VCC) is 5V[cite: 2].
 
 3. Dual Dimmer Circuit
+
 Triac & Diac Control: The dimmer uses a standard configuration combining a MOC3021XSM optoisolator and a BTA16-600B triac (Q1, Q2) to control the AC sine wave passing through the loads (Load1, Load2)[cite: 2].
 
 Operation Principle: When the control pin goes HIGH, the internal driver triggers the triac to conduct. Synchronized with the ZeroCross signal, the ESP32 precisely times the firing pulse to regulate bulb brightness smoothly.
