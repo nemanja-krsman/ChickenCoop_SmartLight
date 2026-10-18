@@ -18,6 +18,8 @@ This project introduces a cost-effective, standalone hardware solution built aro
 
 The top-level composition of the system is illustrated below:
 
+<img width="823" height="457" alt="image" src="https://github.com/user-attachments/assets/91a5c807-1a9e-418e-8f8f-fbb856c5ba50" />
+
 The system relies on three primary blocks:
 
 - Real-Time Clock (RTC): Keeps track of accurate time independently.
