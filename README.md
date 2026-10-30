@@ -69,6 +69,8 @@ The dimmer circuit provides independent brightness control for two AC lighting l
 
 The firmware is designed to operate independently of external internet connectivity. It combines time-based scheduling, RTC communication, zero-cross synchronization, and two-channel brightness control.
 
+For visual diagrams of the firmware startup, lamp scheduling, and Bluetooth command flow, see [Software Flow](software/SoftwareFlow.md).
+
 ### 📡 Bluetooth Configuration
 
 The system supports Bluetooth Classic and Bluetooth Low Energy (BLE) for initial setup and device configuration.
