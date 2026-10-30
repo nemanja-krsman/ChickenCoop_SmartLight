@@ -18,7 +18,7 @@ This project provides a cost-effective, standalone solution built around an ESP3
 ## 📚 Project Documentation
 
 - [Hardware overview](doc/HardwareOverview.md) — system architecture, circuit details, prototype components, installation photos, and safety information.
-- [doc/Software flow](SoftwareFlow.md) — diagrams of startup, scheduled dimming, and Bluetooth command handling.
+- [Software flow](SoftwareFlow.md) — diagrams of startup, scheduled dimming, and Bluetooth command handling.
 
 ## 💻 Firmware Overview & Configuration
 
