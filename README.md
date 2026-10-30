@@ -20,7 +20,7 @@ This project provides a cost-effective, standalone solution built around an ESP3
 - [Hardware overview](doc/HardwareOverview.md) — system architecture, circuit details, prototype components, installation photos, and safety information.
 - [Software flow](doc/SoftwareFlow.md) — diagrams of startup, scheduled dimming, and Bluetooth command handling.
 
-## 💻 Firmware Overview & Configuration
+## 💻 Configuration & Bluetooth Commands
 
 The firmware is designed to operate independently of external internet connectivity. It combines time-based scheduling, RTC communication, zero-cross synchronization, and two-channel brightness control.
 
